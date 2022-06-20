@@ -12,7 +12,7 @@ RUN apt-get clean \
   && rm -rf /var/lib/apt/lists/* \
   && useradd --no-create-home micropython
 
-RUN git clone --recursive https://github.com/pfalcon/esp-open-sdk.git \
+RUN git clone --recursive https://github.com/ChrisMacGregor/esp-open-sdk.git \
   && git clone https://github.com/micropython/micropython.git \
   && cd micropython && git checkout $VERSION && git submodule update --init \
   && chown -R micropython:micropython ../esp-open-sdk ../micropython
